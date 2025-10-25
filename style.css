@@ -215,14 +215,12 @@ body {
   text-decoration: none;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .curriculo-container { flex-direction: column; }
   .sidebar { width: 100%; }
   .conteudo-principal { padding: 30px 25px; }
 }
 
-/* Para impressão */
 @media print {
   body { background: white; padding: 0; }
   .curriculo-container { box-shadow: none; max-width: 100%; min-height: auto; }
