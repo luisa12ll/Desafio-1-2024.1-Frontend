@@ -1,0 +1,229 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Container principal - folha A4 */
+.curriculo-container {
+  max-width: 900px;
+  min-height: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  display: flex;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #6c5b7b 0%, #8b7a93 100%);
+  color: #fff;
+  padding: 40px 25px;
+}
+
+.foto-perfil {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.foto-perfil img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.sidebar section {
+  margin-bottom: 30px;
+}
+
+/* Contatos */
+.contato-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.contato-item .icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+.contato-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.contato-item a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Lista sidebar */
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  padding: 8px 0 8px 15px;
+  position: relative;
+  font-size: 14px;
+}
+.sidebar ul li::before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.7);
+}
+
+.conteudo-principal {
+  flex: 1;
+  padding: 40px 45px;
+  background: #fff;
+}
+
+.cabecalho {
+  margin-bottom: 35px;
+  border-bottom: 3px solid #6c5b7b;
+  padding-bottom: 15px;
+}
+.cabecalho h1 {
+  font-size: 36px;
+  color: #2c2c2c;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.cabecalho .cargo {
+  font-size: 18px;
+  color: #6c5b7b;
+  font-weight: 500;
+}
+
+.secao {
+  margin-bottom: 30px;
+}
+.secao h2 {
+  font-size: 22px;
+  color: #6c5b7b;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item h3 {
+  font-size: 18px;
+  color: #2c2c2c;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.item .instituicao {
+  font-size: 15px;
+  color: #6c5b7b;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.item .periodo {
+  font-size: 14px;
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.item .descricao {
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Links de projetos */
+.link-projeto {
+  display: inline-block;
+  margin-top: 8px;
+  color: #6c5b7b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.link-projeto:hover {
+  color: #8b7a93;
+  text-decoration: underline;
+}
+
+/* Listas */
+.lista-cursos {
+  list-style: none;
+  padding-left: 0;
+}
+.lista-cursos li {
+  padding: 8px 0 8px 20px;
+  position: relative;
+  font-size: 14px;
+  color: #495057;
+}
+.lista-cursos li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #6c5b7b;
+  font-weight: bold;
+}
+
+/* Links dos certificados */
+.lista-cursos a,
+.lista-cursos a:visited {
+  color: #212529;
+  text-decoration: none;
+  font-weight: normal;
+  cursor: pointer;
+  transition: border-bottom 0.2s;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 1px;
+}
+.lista-cursos a:hover {
+  border-bottom: 1.5px solid #6c5b7b;
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .curriculo-container { flex-direction: column; }
+  .sidebar { width: 100%; }
+  .conteudo-principal { padding: 30px 25px; }
+}
+
+/* Para impressão */
+@media print {
+  body { background: white; padding: 0; }
+  .curriculo-container { box-shadow: none; max-width: 100%; min-height: auto; }
+}
